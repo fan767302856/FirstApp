@@ -1,0 +1,73 @@
+{
+  "variant": {
+    "module": {
+      "rootBuildGradleFolder": "E:\\ASWorkspace\\firstandroid",
+      "sdkFolder": "E:\\Android\\Sdk\\platform-tools",
+      "isNativeCompilerSettingsCacheEnabled": false,
+      "isBuildOnlyTargetAbiEnabled": true,
+      "splitsAbiFilterSet": [],
+      "intermediatesFolder": "E:\\ASWorkspace\\firstandroid\\app\\build\\intermediates",
+      "gradleModulePathName": ":app",
+      "moduleRootFolder": "E:\\ASWorkspace\\firstandroid\\app",
+      "makeFile": "E:\\ASWorkspace\\firstandroid\\app\\CMakeLists.txt",
+      "buildSystem": "CMAKE",
+      "compilerSettingsCacheFolder": "E:\\ASWorkspace\\firstandroid\\.cxx",
+      "cxxFolder": "E:\\ASWorkspace\\firstandroid\\app\\.cxx",
+      "ndkFolder": "E:\\Android\\Sdk\\platform-tools\\ndk-bundle",
+      "ndkVersion": "16.1.4479499",
+      "ndkSupportedAbiList": [
+        "ARMEABI",
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "MIPS",
+        "MIPS64",
+        "X86",
+        "X86_64"
+      ],
+      "ndkDefaultAbiList": [
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "X86",
+        "X86_64"
+      ],
+      "cmakeToolchainFile": "."
+    },
+    "buildSystemArgumentList": [],
+    "cFlagList": [],
+    "cppFlagsList": [],
+    "variantName": "_fan_1136Debug",
+    "soFolder": "E:\\ASWorkspace\\firstandroid\\app\\build\\intermediates\\cmake\\_fan_1136Debug\\lib",
+    "objFolder": "E:\\ASWorkspace\\firstandroid\\app\\build\\intermediates\\cmake\\_fan_1136Debug\\obj",
+    "jsonFolder": "E:\\ASWorkspace\\firstandroid\\app\\.cxx\\cmake\\_fan_1136Debug",
+    "gradleBuildOutputFolder": "E:\\ASWorkspace\\firstandroid\\app\\.cxx\\cxx\\_fan_1136Debug",
+    "isDebuggableEnabled": true,
+    "validAbiList": [
+      "ARMEABI",
+      "ARMEABI_V7A",
+      "X86",
+      "X86_64"
+    ],
+    "buildTargetSet": []
+  },
+  "abi": "X86",
+  "abiPlatformVersion": 19,
+  "cxxBuildFolder": "E:\\ASWorkspace\\firstandroid\\app\\.cxx\\cmake\\_fan_1136Debug\\x86",
+  "jsonFile": "E:\\ASWorkspace\\firstandroid\\app\\.cxx\\cmake\\_fan_1136Debug\\x86\\android_gradle_build.json",
+  "gradleBuildOutputFolder": "E:\\ASWorkspace\\firstandroid\\app\\.cxx\\cxx\\_fan_1136Debug\\x86",
+  "objFolder": "E:\\ASWorkspace\\firstandroid\\app\\build\\intermediates\\cmake\\_fan_1136Debug\\obj\\x86",
+  "buildCommandFile": "E:\\ASWorkspace\\firstandroid\\app\\.cxx\\cmake\\_fan_1136Debug\\x86\\build_command.txt",
+  "buildOutputFile": "E:\\ASWorkspace\\firstandroid\\app\\.cxx\\cmake\\_fan_1136Debug\\x86\\build_output.txt",
+  "modelOutputFile": "E:\\ASWorkspace\\firstandroid\\app\\.cxx\\cmake\\_fan_1136Debug\\x86\\build_model.json",
+  "cmake": {
+    "cmakeListsWrapperFile": "E:\\ASWorkspace\\firstandroid\\app\\.cxx\\cxx\\_fan_1136Debug\\x86\\CMakeLists.txt",
+    "toolchainWrapperFile": "E:\\ASWorkspace\\firstandroid\\app\\.cxx\\cxx\\_fan_1136Debug\\x86\\android_gradle_build.toolchain.cmake",
+    "buildGenerationStateFile": "E:\\ASWorkspace\\firstandroid\\app\\.cxx\\cxx\\_fan_1136Debug\\x86\\build_generation_state.json",
+    "cacheKeyFile": "E:\\ASWorkspace\\firstandroid\\app\\.cxx\\cxx\\_fan_1136Debug\\x86\\compiler_cache_key.json",
+    "compilerCacheUseFile": "E:\\ASWorkspace\\firstandroid\\app\\.cxx\\cxx\\_fan_1136Debug\\x86\\compiler_cache_use.json",
+    "compilerCacheWriteFile": "E:\\ASWorkspace\\firstandroid\\app\\.cxx\\cxx\\_fan_1136Debug\\x86\\compiler_cache_write.json",
+    "toolchainSettingsFromCacheFile": "E:\\ASWorkspace\\firstandroid\\app\\.cxx\\cxx\\_fan_1136Debug\\x86\\compiler_settings_cache.cmake",
+    "cmakeWrappingBaseFolder": "."
+  },
+  "jsonGenerationLoggingRecordFile": "E:\\ASWorkspace\\firstandroid\\app\\.cxx\\cmake\\_fan_1136Debug\\x86\\json_generation_record.json",
+  "compileCommandsJsonFile": "E:\\ASWorkspace\\firstandroid\\app\\.cxx\\cmake\\_fan_1136Debug\\x86\\compile_commands.json"
+}

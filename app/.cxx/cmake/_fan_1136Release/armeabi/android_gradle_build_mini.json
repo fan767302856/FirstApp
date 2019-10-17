@@ -1,0 +1,16 @@
+{
+  "buildFiles": [
+    "E:\\ASWorkspace\\firstandroid\\app\\CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "E:\\Android\\Sdk\\platform-tools\\cmake\\3.6.4111459\\bin\\cmake.exe --build E:\\ASWorkspace\\firstandroid\\app\\.cxx\\cmake\\_fan_1136Release\\armeabi --target clean"
+  ],
+  "libraries": {
+    "native-lib-Release-armeabi": {
+      "artifactName": "native-lib",
+      "buildCommand": "E:\\Android\\Sdk\\platform-tools\\cmake\\3.6.4111459\\bin\\cmake.exe --build E:\\ASWorkspace\\firstandroid\\app\\.cxx\\cmake\\_fan_1136Release\\armeabi --target native-lib",
+      "abi": "armeabi",
+      "output": "E:\\ASWorkspace\\firstandroid\\app\\build\\intermediates\\cmake\\_fan_1136Release\\obj\\armeabi\\libnative-lib.so"
+    }
+  }
+}

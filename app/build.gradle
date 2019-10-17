@@ -1,0 +1,138 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.jakewharton.butterknife'
+
+static def getDate() {
+    def date = new Date()
+    def formattedDate = date.format('MMddhhmm')
+    return formattedDate
+}
+
+android {
+
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        applicationId "com.fan.first_android"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode project.properties['APP_CODE'].toInteger()
+        versionName APP_VERSION
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        flavorDimensions "versionCode"
+        manifestPlaceholders=[UMENG_CHANNEL_VALUE: "First_App"]
+
+        multiDexEnabled true
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "x86_64", "x86"
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    aaptOptions {
+        cruncherEnabled = false
+        useNewCruncher = false
+    }
+
+    dexOptions {
+        javaMaxHeapSize "2g"
+    }
+
+    allprojects {
+        repositories {
+            mavenCentral()
+            maven { url "https://jitpack.io" }
+        }
+    }
+
+    signingConfigs {
+        release {
+            keyAlias 'shenTongSubway'
+            keyPassword 'shenTongSubway'
+            storeFile file('E:/ASWorkspace/firstandroid/shenTongSubway.jks')
+            storePassword 'shenTongSubway'
+        }
+        debug {
+            keyAlias 'shenTongSubway'
+            keyPassword 'shenTongSubway'
+            storeFile file('E:/ASWorkspace/firstandroid/shenTongSubway.jks')
+            storePassword 'shenTongSubway'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+
+        debug {
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
+        }
+    }
+
+//    渠道打包
+    productFlavors {
+        _fan_1136 { manifestPlaceholders = [UMENG_CHANNEL_VALUE: "Second_App"] }
+
+    }
+
+    productFlavors.all { flavor ->
+        flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+    }
+
+//修改生成的apk名字及输出文件夹
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            //时间戳
+            def timeNow
+            //是否为Jenkins打包，输出路径不同
+            if ("true" == IS_JENKINS) {
+                //Jenkins打包输出到服务器路径
+                timeNow = BUILD_TIME
+                //xxx-v1.0.1-xxx-release.apk
+                outputFileName = 'v' + APP_VERSION + variant.productFlavors[0].name + '_' +
+                        variant.buildType.name + "_" + timeNow + '.apk'
+            } else {
+                //本机打包输出在本机路径
+                timeNow = getDate()
+                outputFileName = 'v' + APP_VERSION + variant.productFlavors[0].name + '_' +
+                        variant.buildType.name + "_" + timeNow + '.apk'
+            }
+        }
+    }
+}
+
+configurations {
+    release
+    debug
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.3.0-alpha02'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0-alpha02'
+    implementation project(':base_library')
+    implementation 'com.jakewharton:butterknife:10.2.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
+
+    implementation files('libs/umeng-analytics-8.1.3.jar')
+    implementation files('libs/umeng-common-2.1.0.jar')
+}

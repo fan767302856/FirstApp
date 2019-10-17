@@ -1,0 +1,38 @@
+
+{
+	"buildFiles" : [ "E:/ASWorkspace/firstandroid/app/CMakeLists.txt" ],
+	"cleanCommands" : 
+	[
+		"E:\\Android\\Sdk\\platform-tools\\cmake\\3.6.4111459\\bin\\cmake.exe --build E:\\ASWorkspace\\firstandroid\\app\\.cxx\\cmake\\_fan_1136Release\\x86 --target clean"
+	],
+	"cppFileExtensions" : [ "cpp" ],
+	"libraries" : 
+	{
+		"native-lib-Release-x86" : 
+		{
+			"abi" : "x86",
+			"artifactName" : "native-lib",
+			"buildCommand" : "E:\\Android\\Sdk\\platform-tools\\cmake\\3.6.4111459\\bin\\cmake.exe --build E:\\ASWorkspace\\firstandroid\\app\\.cxx\\cmake\\_fan_1136Release\\x86 --target native-lib",
+			"buildType" : "release",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  --target=i686-none-linux-android --gcc-toolchain=E:/Android/Sdk/platform-tools/ndk-bundle/toolchains/x86-4.9/prebuilt/windows-x86_64 --sysroot=E:/Android/Sdk/platform-tools/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -isystem E:\\Android\\Sdk\\platform-tools\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include -isystem E:\\Android\\Sdk\\platform-tools\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\libs\\x86\\include -isystem E:\\Android\\Sdk\\platform-tools\\ndk-bundle\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include\\backward  -isystem E:/Android/Sdk/platform-tools/ndk-bundle/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=19 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security   -O2 -DNDEBUG  -fPIC    -c ",
+					"src" : "E:/ASWorkspace/firstandroid/app/src/main/cpp/native-lib.cpp",
+					"workingDirectory" : "E:/ASWorkspace/firstandroid/app/.cxx/cmake/_fan_1136Release/x86"
+				}
+			],
+			"output" : "E:/ASWorkspace/firstandroid/app/build/intermediates/cmake/_fan_1136Release/obj/x86/libnative-lib.so",
+			"toolchain" : "104068105"
+		}
+	},
+	"toolchains" : 
+	{
+		"104068105" : 
+		{
+			"cCompilerExecutable" : "E:/Android/Sdk/platform-tools/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe",
+			"cppCompilerExecutable" : "E:/Android/Sdk/platform-tools/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe"
+		}
+	}
+}
